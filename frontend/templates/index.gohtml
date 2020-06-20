@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/resources/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="hero__logo">
+                    <img src="/resources/img/search_icon.svg" class="hero__icon">
+                    <h3 class="hero__title">Survey</h3>
+            </div>
+            <div class="hero__description">
+                <ul>
+                        <li><span>Pregnancies: </span> Cantidad de embarazos</li>
+                        <li><span>Blood Pressure: </span> Presión Arterial Diastólica (mm Hg)</li>
+                        <li><span>Insulin: </span>  Insulina sérica de 2 horas (mu U/ml)</li>
+                        <li><span>Diabetes Pedigree Function: </span>  Una función que califica la probabilidad de diabetes según los antecedentes familiares</li>
+                </ul>
+                <ul>
+
+                        <li><span>Glucosa: </span>  Concentración de glucosa en plasma durante 2 horas en una prueba oral de tolerancia a la glucosa.</li>
+                        <li><span>Skin Thickness: </span>  Grosor del pliegue de tríceps</li>
+                        <li><span>BMI: </span> Índice de masa corporal (peso en kg / (altura en m) 2)</li>
+                        <li><span>Age: </span>Edad (años)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="survey ">
+            <div class="survey-container active">
+                <h3 class="survey__title">Por favor complete con sus datos</h3>
+                <form class="form">
+                    <div class="form__group">
+                        <div class="form__input-container" ><input type="number"  step="any" class="form__input"placeholder="Pregnancies"></div>
+                        <div class="form__input-container"><input type="number" step="any"  class="form__input" placeholder="Glucose"></div>
+                    </div>
+                    <div class="form__group">
+                        <div class="form__input-container"><input type="number" step="any"  class="form__input" placeholder="Blood Pressure"></div>
+                        <div class="form__input-container"><input type="number" step="any"  class="form__input" placeholder="Skin Thickness"></div>
+                    </div>
+                    <div class="form__group">
+                        <div class="form__input-container"><input type="number" step="any"  class="form__input" placeholder="Insulin"></div>
+                        <div class="form__input-container"><input type="number" step="any"  class="form__input" placeholder="BMI"></div>
+                    </div>
+                    <div class="form__group">
+                        <div class="form__input-container"><input type="number" step="any"  class="form__input" placeholder="Diabetes Pedigree Function"></div>
+                        <div class="form__input-container"><input type="number" step="any"  class="form__input" placeholder="Age"></div>
+                    </div>
+                    <div class="form__group last">
+                            <label>Valor K del alrogitmo</label>
+                            <div class="form__input-container"><input type="number" class="form__input" placeholder="k VALUE"></div>
+                    </div>
+                    <input type="submit" class="form__submit-btn">
+                </form>
+            </div>
+            <div class="loader">
+                <img src="/resources/img/loading.png" class="loader__img">
+            </div>
+            <div class="results">
+                <div class="results__leyendary">
+                    <span>Leyenda Resultados</span>
+                    <span>0 : No padecerá</span>
+                    <span>1 : Si padecerá</span>
+                </div>
+                <div class="results-wrapper">
+                <div class="results__block">
+                    <span style="font-weight:bold;">Prediccion:</span>
+                    <span class="results-prediction-text"></span>
+                </div>
+                <br>
+                <br>
+                <div class="neighbors-container">
+                        
+                        <table class="table-neighbors">
+                                <caption class="neighbors__title" style="font-weight:bold;"></caption>
+                                <colgroup>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                    <col/>
+                                    <col class="yellow"  />
+                                    <col class="yellow"  />
+                                  </colgroup>
+                                <thead>
+                                    <tr>
+                                        <td>Embar.</td>
+                                        <td>Gluc.</td>
+                                        <td>Pres.</td>
+                                        <td>Esp.</td>
+                                        <td>Insul.</td>
+                                        <td>Indic.</td>
+                                        <td>Func.</td>
+                                        <td>Age</td>
+                                        <td>Resultados</td>
+                                        <td>Distancias</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-neighbors__body">
+                                </tbody>
+                            </table>
+                </div>
+                <button class="btn-restart">Volver a probar</button>
+                 </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/resources/js/main.js"></script>
+</body>
+</html>
